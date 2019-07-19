@@ -61,5 +61,35 @@ interface SearchFunc {
   (source: string, subString: string): boolean
 }
 
+let mySearch: SearchFunc
+mySearch = function(src: string, sub: string){
+  let result = src.search(sub)
+  return result > -1
+}
+
+/** 
+ * 可索引类型 
+ */
+interface StringArray {
+  [index: number]: string
+}
+
+let myArray: StringArray = ['Bob', 'Fred']
+let myStr: string = myArray[0]
+
+// 属性类型应与索引类型匹配
+interface NumberDictionary {
+  [index: string]: number;
+  length: number;    // 可以，length是number类型
+  name: string       // 错误，`name`的类型与索引类型返回值的类型不匹配
+}
+
+/**
+ * 类类型
+ */
+
+
+
+
 
 
