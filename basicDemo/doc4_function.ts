@@ -1,6 +1,7 @@
 /**
- * 为函数定义类型
+ * 函数类型
  */
+// 为函数定义类型
 function add(x: number, y: number): number {
   return x + y
 }
@@ -41,5 +42,24 @@ function buildName2(firstName: string, lastName = 'Smith') {
 function buildName3(firstName: string, ...restOfName: string[]) {
   return firstName + ' ' + restOfName.join(' ')
 }
-
 let name3 = buildName3('Joseph', 'Samuel', 'Lucas', 'Mackinzie')
+
+// 定义函数类型时使用...
+function buildName4(firstName: string, ...restOfName: string[]) {
+  return firstName + ' ' + restOfName.join(' ')
+} 
+let buildNameFun: (fname: string, ...rest: string[]) => string = buildName4 
+
+/**
+ * this
+ * 函数调用的方式
+ * 1. 普通的函数调用
+ * 2. 作为Objec的属性调用
+ * 3. 作为实例的方法
+ * 4. DOM事件的回调
+ * 其他：箭头函数的this
+ */
+
+ /**
+  * 重载
+  */

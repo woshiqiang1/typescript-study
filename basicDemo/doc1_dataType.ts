@@ -24,7 +24,7 @@ let c: Color = Color.blue
 enum Color {red = 1, Green = 2, blue = 4}
 let colorName: string = Color[2]
 
-//Any 来自不缺定的地方才用，任意的类型
+//Any 来自不确定的地方才用，任意的类型
 let notSure: any = 'some place import'
 
 //Void 表示没有类型，一般函数无返回值时使用，声明void类型变量，只能赋值为undefind或者null

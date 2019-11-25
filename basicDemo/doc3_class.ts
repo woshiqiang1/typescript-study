@@ -1,6 +1,7 @@
 /**
  * 类
  */
+
 class Greeter {
   greeting: string
   constructor(message: string) {
