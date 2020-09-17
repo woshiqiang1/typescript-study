@@ -1,4 +1,4 @@
-/* interface 接口 */
+/* interface (接口) */
 interface Person {
   firstName: string
   lastName: string
@@ -15,7 +15,7 @@ let user = {
 }
 console.log(greeter(user))
 
-// 可选属性
+// 可选属性(Optional Properties)
 interface SquareConfig {
   color?: string // 可选属性是传入时非必传的属性
   width?: number

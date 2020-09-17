@@ -1,5 +1,5 @@
 /**
- * 类
+ * 类(Classes)
  */
 
 class Greeter {
@@ -8,14 +8,14 @@ class Greeter {
     this.greeting = message
   }
   greet() {
-    return 'hello' + this.greeting
+    return 'hello ' + this.greeting
   }
 }
 
-let greeter2 = new Greeter('world')
+let greeter = new Greeter('world')
 
 /**
- * 继承
+ * 继承(Inheritance)
  */
 class Animal {
   name: string
@@ -54,8 +54,8 @@ sam.move()
 tom.move(35)
 
 /**
- * 共有、私有与受保护修饰符
- * TS默认属性、方法为public
+ * 共有(Public)、私有(Private)与受保(Protected)护修饰符
+ * TS默认属性、方法为public(Public by default)
  */
 // public
 class Animal2 {
@@ -204,8 +204,24 @@ class Greeter2 {
   }
 }
 
-let greeterMaker: typeof Greeter2
-greeterMaker =  Greeter2
+let greeter1: Greeter2
+greeter1 = new Greeter2()
+console.log(greeter1.greet())
+
+let greeterMaker: typeof Greeter2 = Greeter2 // use the class directly
 greeterMaker.standardGreeting = 'hey there!'
-let greeter_2: Greeter2  = new greeterMaker()
-console.log(greeter_2.greet()) 
+
+let greeter2: Greeter2 = new greeterMaker()
+console.log(greeter2.greet())
+
+// Using a class as an interface
+class Point {
+  x: number
+  y: number
+}
+
+interface Point3d extends Point {
+  z: number
+}
+
+let point3d: Point3d = {x: 1, y: 2, z: 3}
